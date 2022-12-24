@@ -9,25 +9,25 @@
 </head>
 
 <body>
-<script>
-    // 简化对象写法
-    // ES6 允许在大括号里面，直接写入变量和函数 作为 对象的属性和方法，这样的书写更加简洁。
-    let name = `张三`;
-    let change = function () {
-        console.log(`永远遵守法律！`);
-    }
-
-    const school = {
-        // name:name,
-        // change:change,   简化它，简化程序员书写的代码，重复了就没有必要写了
-        name,
-        change,
-        improve() {
-            console.log('在学校里记得学法');
+    <script>
+        // 简化对象写法
+        // ES6 允许在大括号里面，直接写入变量和函数 作为 对象的属性和方法，这样的书写更加简洁。
+        let name = `张三`;
+        let change = function () {
+            console.log(`永远遵守法律！`);
         }
-    }
-    console.log(school);   //{name: '张三', change: ƒ, improve: ƒ}
-</script>
+
+        const school = {
+            // name:name,
+            // change:change,   简化它，简化程序员书写的代码，重复了就没有必要写了
+            name,
+            change,
+            improve() {
+                console.log('在学校里记得学法');
+            }
+        }
+        console.log(school);   //{name: '张三', change: ƒ, improve: ƒ}
+    </script>
 </body>
 
 </html>
