@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Map</title>
 </head>
 
 <body>
@@ -13,7 +13,23 @@
     // map 是 ES6 提供的一个新的 数据结构。它类似于对象，也是键值对的集合。
 
     // // 创建 map实例对象
-    // let m = new Map();
+    let m = new Map();
+
+    // 添加元素
+    m.set('sex', '男');
+    m.set('change', function () {
+      console.log('我们可以改变你');
+    })
+
+    console.log(m);  // Map(2) {'sex' => '男', 'change' => ƒ}
+
+    // size
+    console.log(m.size);   // 2   sex 、change（）
+
+    // 删除
+    m.delete('sex')
+
+    console.log(m);   // Map(1) {'change' => ƒ}
 
     // let obj = {
     //   name: 'lisi'
@@ -49,9 +65,28 @@
     console.log(map.get('name')); // walking
     console.log(map.has('title'));// true
     console.log(map.get('title'));// I Am a King
-    map.set('name', 'lisi');
+
+    // 添加元素
+    map.set('sex', '男');
+    map.set('change', function () {
+      console.log('我们可以改变你');
+    })
+
     console.log(map.get('name')); //lisi
 
+    let key = {
+      school: '广州一中'
+    };
+
+    map.set(key, ['深圳', '广州', '北京'])
+
+    // size
+    console.log(map.size);   // 4   name、title 、sex 、change（）
+
+    // 删除
+    map.delete('name')
+
+    console.log(map);   // Map(3) { 'title' => 'I Am a King', 'sex' => '男', 'change' => ƒ }
 
     // map 循环遍历    
     // forEach() 方法，它的第一个参数必须是value ，第二参数是key
